@@ -31,7 +31,7 @@ public class OrdersWriter {
 
                 if (product.getSize() != Product.SIZE_NOT_APPLICABLE) {
                     sb.append("\"size\": \"");
-                    sb.append(getSizeFor(product));
+                    sb.append(product.getSizeString());
                     sb.append("\", ");
                 }
 
@@ -58,15 +58,4 @@ public class OrdersWriter {
         return sb.append("]}").toString();
     }
 
-    private String getSizeFor(Product product) {
-        return switch (product.getSize()) {
-            case 1 -> "XS";
-            case 2 -> "S";
-            case 3 -> "M";
-            case 4 -> "L";
-            case 5 -> "XL";
-            case 6 -> "XXL";
-            default -> "Invalid Size";
-        };
-    }
 }

@@ -41,4 +41,15 @@ public class Product {
             default -> "no color";
         };
     }
+    public String getSizeString() {
+        return switch (size) {
+            case 1 -> "XS";
+            case 2 -> "S";
+            case 3 -> "M";
+            case 4 -> "L";
+            case 5 -> "XL";
+            case 6 -> "XXL";
+            default -> "Invalid Size";
+        };
+    }
 }
