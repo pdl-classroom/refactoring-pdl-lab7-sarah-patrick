@@ -52,4 +52,16 @@ public class Product {
             default -> "Invalid Size";
         };
     }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder("{" +
+            "\"code\": \"" + code + '"' +
+            ", \"color\": \"" + getColorString() + '"');
+        if (size != SIZE_NOT_APPLICABLE) {
+            stringBuilder.append(", \"size\": \"").append(getSizeString()).append('"');
+        }
+        stringBuilder.append(", \"price\": ").append(price).append(", \"currency\": \"").append(currency).append('"').append('}');
+         return stringBuilder.toString();
+    }
 }
