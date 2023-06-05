@@ -26,7 +26,7 @@ public class OrdersWriter {
                 sb.append(product.getCode());
                 sb.append("\", ");
                 sb.append("\"color\": \"");
-                sb.append(getColorFor(product));
+                sb.append(product.getColorString());
                 sb.append("\", ");
 
                 if (product.getSize() != Product.SIZE_NOT_APPLICABLE) {
@@ -67,15 +67,6 @@ public class OrdersWriter {
             case 5 -> "XL";
             case 6 -> "XXL";
             default -> "Invalid Size";
-        };
-    }
-
-    private String getColorFor(Product product) {
-        return switch (product.getColor()) {
-            case 1 -> "blue";
-            case 2 -> "red";
-            case 3 -> "yellow";
-            default -> "no color";
         };
     }
 }

@@ -37,4 +37,12 @@ public class Product {
     public String getCurrency() {
         return currency;
     }
+    public String getColorString() {
+        return switch (color) {
+            case 1 -> "blue";
+            case 2 -> "red";
+            case 3 -> "yellow";
+            default -> "no color";
+        };
+    }
 }
