@@ -22,10 +22,6 @@ public class Product {
         return code;
     }
 
-    public int getColor() {
-        return color;
-    }
-
     public int getSize() {
         return size;
     }
