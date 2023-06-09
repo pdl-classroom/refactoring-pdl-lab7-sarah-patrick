@@ -20,7 +20,7 @@ public class Orders {
             stringBuilder.append("}, ");
         }
 
-        if (orderList.size() > 0) {
+        if (!orderList.isEmpty()) {
             stringBuilder.delete(stringBuilder.length() - 2, stringBuilder.length());
         }
         stringBuilder.append("]}");

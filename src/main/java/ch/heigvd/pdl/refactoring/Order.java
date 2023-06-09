@@ -23,7 +23,7 @@ public class Order {
             stringBuilder.append(product);
             stringBuilder.append(", ");
         }
-        if (products.size() > 0) {
+        if (!products.isEmpty()) {
             stringBuilder.delete(stringBuilder.length() - 2, stringBuilder.length());
         }
         return stringBuilder.toString();
