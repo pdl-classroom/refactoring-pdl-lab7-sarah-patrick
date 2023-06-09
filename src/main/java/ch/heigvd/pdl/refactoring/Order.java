@@ -11,18 +11,6 @@ public class Order {
         this.id = id;
     }
 
-    public int getOrderId() {
-        return id;
-    }
-
-    public int getProductsCount() {
-        return products.size();
-    }
-
-    public Product getProduct(int j) {
-        return products.get(j);
-    }
-
     public void addProduct(Product product) {
         products.add(product);
     }
