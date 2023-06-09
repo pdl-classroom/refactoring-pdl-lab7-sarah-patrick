@@ -11,14 +11,6 @@ public class Orders {
         orderList.add(order);
     }
 
-    public int getOrdersCount() {
-        return orderList.size();
-    }
-
-    public Order getOrder(int i) {
-        return orderList.get(i);
-    }
-
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("{\"orders\": [");
